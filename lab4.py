@@ -8,12 +8,12 @@ url = 'http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KNYTULLY
 
 day1 = datetime.date(2006, 1,1)
 
-with open('Caven_Tullydata.csv', 'a') as csvfile:
+with open('Caven_Tullydata.csv', 'w') as csvfile:
     mywriter = csv.writer(csvfile)
-for i in range(1096):
-    thisTime = day1 + datetime.timedelta(i)
-    downloaded = download(thisTime)
-    extracted = extract(downloaded)
-    mywriter.writerows(extracted)
-    print extracted
+    for i in range(1096):
+        thisTime = day1 + datetime.timedelta(i)
+        downloaded = download(thisTime)
+        extracted = extract(downloaded)
+        mywriter.writerows(extracted)
+        print extracted
 
