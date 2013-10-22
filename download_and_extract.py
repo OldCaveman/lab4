@@ -13,8 +13,4 @@ def extract_date_time_and_temp(downloaded):
 	for measurement in downloaded.split("\n"):
 		interim = measurement.split(',')
 		results.append(interim[0:1])
-	# use csvreader
 	return results
-
-for measurement in downloaded.split("\n"):
-	result = measurement.split(',')
