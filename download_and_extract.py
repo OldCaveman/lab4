@@ -12,5 +12,5 @@ def extract_date_time_and_temp(downloaded):
 	results = []
 	for measurement in downloaded.split("\n"):
 		interim = measurement.split(',')
-		results.append(interim[0:1])
+		results.append(interim[0:2])
 	return results
