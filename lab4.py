@@ -17,19 +17,3 @@ for i in range(1096):
     mywriter.writerows(extracted)
     print extracted
 
-#Split temp and datetime strings
-##        else:
-##            m = j.split(',')
-##            n = m[0]
-#Handle exceptions (not sure why these are occuring really. url contains bad or non-existent data?)
-##            try:
-##                o = m[1]
-##            except:
-##                IndexError
-#write temp and datetime to output file
-##            outp.write(n + ',' + o + '\n')
-##            print n
-##            print o
-##        a = a + 1
-##outp.close()
-
