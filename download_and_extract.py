@@ -12,9 +12,8 @@ def download(thisTime):
 
 def extract(downloaded):
 	results = []
-	for measurement in downloaded.split("\n"):
+	for measurement in downloaded.split("\n")[2:]:
 		interim = measurement.split(',')
 		if len(interim) > 1:
-			results.append(interim[2:])
+			results.append(interim[0:2])
 	return results
-
