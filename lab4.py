@@ -12,7 +12,7 @@ for i in range(1096):
     thisTime = day1 + datetime.timedelta(i)
     downloaded = download(thisTime)
     extracted = extract(downloaded)
-    with open(Caven_Tullydata.csv, 'wa') as csvfile:
+    with open('Caven_Tullydata.csv', 'wa') as csvfile:
         mywriter = csv.writer(csvfile)
         mywriter.writerows(extracted)
         print extracted
