@@ -1,9 +1,11 @@
 import urllib2
 import csv
+import datetime
 
 def download(datetime):
 	# parse out the date into the url string
-	url = "http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KNYTULLY1&month=10&day=32&year=2008&format=1"
+	url = "http://www.wunderground.com/weatherstation/WXDailyHistory.asp?ID=KNYTULLY1&month=%i&day=%i&year=%i&format=1"
+	data = url % (thisTime.month, thisTime.day, thisTime.year)
 	response = urllib2.urlopen(url).read()
 	accurate = response.replace('\n<br>', "")
 	return accurate
