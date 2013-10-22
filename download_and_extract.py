@@ -15,6 +15,6 @@ def extract(downloaded):
 	for measurement in downloaded.split("\n"):
 		interim = measurement.split(',')
 		if len(interim) > 1:
-			results.append(interim[0:2])
+			results.append(interim[2:])
 	return results
 
